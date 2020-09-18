@@ -1,0 +1,61 @@
+{
+    "name": "suilven\/uk-covid-govt-api-client",
+    "type": "library",
+    "description": "API Client to UK Govt Covid API",
+    "keywords": [
+        "Covid-19",
+        "Sars",
+        "API",
+        "UK",
+        "govt"
+    ],
+    "homepage": "https:\/\/github.com\/suilven\/uk-govt-covid-api-client",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gordon Anderson",
+            "email": "gordon.b.anderson@gmail.com",
+            "homepage": "https:\/\/github.com\/gordonbanderson",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "~7.1",
+        "nesbot/carbon": "^2.40",
+        "phpunit/phpunit": "^9.3"
+    },
+    "require-dev": {
+        "ergebnis/composer-normalize": "^2.5",
+        "php-parallel-lint/php-console-highlighter": "^0.5.0",
+        "php-parallel-lint/php-parallel-lint": "^1.2",
+        "php-vcr/phpunit-testlistener-vcr": "^3.2",
+        "phpstan/extension-installer": "^1.0",
+        "phpstan/phpstan-strict-rules": "^0.12.5",
+        "slevomat/coding-standard": "^6.4",
+        "suilven/php-travis-enhancer": "^1.0",
+        "vimeo/psalm": "^3.16"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Suilven\\CovidAPIClient\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Suilven\\CovidAPIClient\\Tests\\": "tests"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "checkCode": "composer checkcs && composer lint && composer phpstan && composer psalm",
+        "checkcs": "vendor\/bin\/phpcs --standard=ruleset.xml --extensions=php --tab-width=4 -sp src tests",
+        "fixcs": "vendor\/bin\/phpcbf --standard=ruleset.xml --extensions=php --tab-width=4 -sp src tests",
+        "lint": "vendor\/bin\/parallel-lint src\/ tests\/",
+        "phpstan": "vendor\/bin\/phpstan analyse --level=6 -c tests\/phpstan.neon src\/",
+        "psalm": "vendor\/bin\/psalm --show-info=true"
+    }
+}
