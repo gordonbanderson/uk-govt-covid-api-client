@@ -1,12 +1,13 @@
-FROM php:7.4-cli-buster
+FROM php:7.3-cli-buster
 
 RUN apt-get -y update && apt -y upgrade
-RUN apt-get -y install figlet git zip unzip libicu-dev default-mysql-client  curl software-properties-common
+RUN apt-get -y install figlet git zip unzip libicu-dev default-mysql-client  curl software-properties-common libxml2-dev
 RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
 RUN apt -y install nodejs
 RUN docker-php-ext-install pdo_mysql \
     && docker-php-ext-configure intl \
-    && docker-php-ext-install intl
+    && docker-php-ext-install intl \
+    && docker-php-ext-install soap
 
 RUN apt-get -y autoremove && apt-get -y clean
 
