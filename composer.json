@@ -1,5 +1,5 @@
 {
-    "name": "suilven\/uk-covid-govt-api-client",
+    "name": "suilven/uk-covid-govt-api-client",
     "type": "library",
     "description": "API Client to UK Govt Covid API",
     "keywords": [
@@ -9,13 +9,13 @@
         "UK",
         "govt"
     ],
-    "homepage": "https:\/\/github.com\/suilven\/uk-govt-covid-api-client",
+    "homepage": "https://github.com/suilven/uk-govt-covid-api-client",
     "license": "MIT",
     "authors": [
         {
             "name": "Gordon Anderson",
             "email": "gordon.b.anderson@gmail.com",
-            "homepage": "https:\/\/github.com\/gordonbanderson",
+            "homepage": "https://github.com/gordonbanderson",
             "role": "Developer"
         }
     ],
@@ -52,10 +52,10 @@
     "prefer-stable": true,
     "scripts": {
         "checkCode": "composer checkcs && composer lint && composer phpstan && composer psalm",
-        "checkcs": "vendor\/bin\/phpcs --standard=ruleset.xml --extensions=php --tab-width=4 -sp src tests",
-        "fixcs": "vendor\/bin\/phpcbf --standard=ruleset.xml --extensions=php --tab-width=4 -sp src tests",
-        "lint": "vendor\/bin\/parallel-lint src\/ tests\/",
-        "phpstan": "vendor\/bin\/phpstan analyse --level=6 -c tests\/phpstan.neon src\/",
-        "psalm": "vendor\/bin\/psalm --show-info=true"
+        "checkcs": "vendor/bin/phpcs --standard=ruleset.xml --extensions=php --tab-width=4 -sp src tests",
+        "fixcs": "vendor/bin/phpcbf --standard=ruleset.xml --extensions=php --tab-width=4 -sp src tests",
+        "lint": "vendor/bin/parallel-lint src/ tests/",
+        "phpstan": "vendor/bin/phpstan analyse --level=6 -c tests/phpstan.neon src/",
+        "psalm": "vendor/bin/psalm --show-info=true"
     }
 }
