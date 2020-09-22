@@ -22,7 +22,16 @@ class Http
         ]);
         \curl_setopt($ch, \CURLOPT_RETURNTRANSFER, 1);
         $response = \curl_exec($ch);
+        $info = curl_getinfo($ch);
         \curl_close($ch);
+
+        $httpCode = intval($info['http_code']);
+
+        error_log('CODE: ' . $httpCode);
+        if ($httpCode !== 200) {
+            error_log('**** EXCEPTION THROWN ****');
+            throw new \Exception('http error returned');
+        }
 
         return $response;
     }

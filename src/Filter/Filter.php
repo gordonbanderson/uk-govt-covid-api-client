@@ -9,7 +9,7 @@ namespace Suilven\CovidAPIClient\Filter;
  */
 class Filter
 {
-    /** @var AreaType|null */
+    /** @var \Suilven\CovidAPIClient\Filter\AreaType|null */
     private $areaType;
 
     /** @var string|null */

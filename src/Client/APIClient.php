@@ -2,6 +2,7 @@
 
 namespace Suilven\CovidAPIClient\Client;
 
+use Suilven\CovidAPIClient\Model\Results;
 use Suilven\CovidAPIClient\Transport\Http;
 
 class APIClient
@@ -22,25 +23,16 @@ class APIClient
         $url = Http::ENDPOINT . '?filters=' . $encodedFilters;
         $url .= '&structure=' . $structure;
 
-        error_log('URL: ' . $url);
+        \error_log('URL: ' . $url);
 
         $gzipped = $this->http->request($url);
-        return gzdecode($gzipped);
-    }
+        error_log('GZIPPPED');
+        error_log(print_r($gzipped, true));
+
+        $gunzipped = \gzdecode($gzipped);
 
 
-    private function getStructure()
-    {
-        $structure = [
-            'date' => 'date',
-            'areaName' => 'areaName',
-            'areaCode' => 'areaCode',
-            'newCasesByPublishDate' => 'newCasesByPublishDate',
-            'cumCasesByPublishDate' => 'cumCasesByPublishDate',
-            'newDeaths28DaysByDeathDate' => 'newDeaths28DaysByDeathDate',
-            'cumDeaths28DaysByDeathDate' => 'cumDeaths28DaysByDeathDate',
-        ];
-        return json_encode($structure);
+        return new Results($gunzipped);
     }
 
 
@@ -71,5 +63,21 @@ class APIClient
         }
 
         return \implode(';', $encodedFilters);
+    }
+
+
+    private function getStructure()
+    {
+        $structure = [
+            'date' => 'date',
+            'areaName' => 'areaName',
+            'areaCode' => 'areaCode',
+            'newCasesByPublishDate' => 'newCasesByPublishDate',
+            'cumCasesByPublishDate' => 'cumCasesByPublishDate',
+            'newDeaths28DaysByDeathDate' => 'newDeaths28DaysByDeathDate',
+            'cumDeaths28DaysByDeathDate' => 'cumDeaths28DaysByDeathDate',
+        ];
+
+        return \json_encode($structure);
     }
 }

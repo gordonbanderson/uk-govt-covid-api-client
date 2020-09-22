@@ -1,0 +1,559 @@
+
+-
+    request:
+        method: GET
+        url: 'https://api.coronavirus.data.gov.uk/v1/data?filters=areaType=utla;areaName=East%20of%20England&structure={"date":"date","areaName":"areaName","areaCode":"areaCode","newCasesByPublishDate":"newCasesByPublishDate","cumCasesByPublishDate":"cumCasesByPublishDate","newDeaths28DaysByDeathDate":"newDeaths28DaysByDeathDate","cumDeaths28DaysByDeathDate":"cumDeaths28DaysByDeathDate"}'
+        headers:
+            Host: api.coronavirus.data.gov.uk
+            Content-Type: application/json
+    response:
+        status:
+            http_version: '1.1'
+            code: '204'
+            message: 'No Content'
+        headers:
+            Cache-Control: 'public, max-age=90'
+            Content-Length: '0'
+            Content-Location: 'https://api.coronavirus.data.gov.uk/v1/data?filters=areaType=utla;areaName=East%20of%20England&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22areaCode%22:%22areaCode%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeaths28DaysByDeathDate%22:%22newDeaths28DaysByDeathDate%22,%22cumDeaths28DaysByDeathDate%22:%22cumDeaths28DaysByDeathDate%22%7D&format=json&page=1'
+            Last-Modified: 'Tue, 22 Sep 2020 14:58:38 GMT'
+            Request-Context: 'appId=cid-v1:10ef5909-f7e8-4267-86f0-f575a2bdc89e'
+            X-Content-Type-Options: nosniff
+            referrer-policy: 'origin-when-cross-origin,strict-origin-when-cross-origin'
+            Content-Security-Policy: 'default-src ''none''; style-src ''self'' ''unsafe-inline'''
+            X-Frame-Options: deny
+            x-phe-media-type: PHE-COVID19.v1
+            x-xss-protection: '1; mode=block'
+            Strict-Transport-Security: 'max-age=31536000; includeSubdomains; preload'
+            PHE-Website-Request: '0'
+            PHE-API-Cache-Duration: '9721'
+            Date: 'Tue, 22 Sep 2020 20:04:15 GMT'
+        curl_info:
+            url: 'https://api.coronavirus.data.gov.uk/v1/data?filters=areaType=utla;areaName=East%20of%20England&structure={"date":"date","areaName":"areaName","areaCode":"areaCode","newCasesByPublishDate":"newCasesByPublishDate","cumCasesByPublishDate":"cumCasesByPublishDate","newDeaths28DaysByDeathDate":"newDeaths28DaysByDeathDate","cumDeaths28DaysByDeathDate":"cumDeaths28DaysByDeathDate"}'
+            content_type: null
+            http_code: 204
+            header_size: 1111
+            request_size: 438
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 1.297709
+            namelookup_time: 0.454868
+            connect_time: 0.497886
+            pretransfer_time: 0.8864
+            size_upload: !!float 0
+            size_download: !!float 0
+            speed_download: !!float 0
+            speed_upload: !!float 0
+            download_content_length: !!float 0
+            upload_content_length: !!float -1
+            starttransfer_time: 1.297652
+            redirect_time: !!float 0
+            redirect_url: ''
+            primary_ip: 51.104.243.27
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 192.168.32.2
+            local_port: 59538
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: HTTPS
+            appconnect_time_us: 886147
+            connect_time_us: 497886
+            namelookup_time_us: 454868
+            pretransfer_time_us: 886400
+            redirect_time_us: 0
+            starttransfer_time_us: 1297652
+            total_time_us: 1297709
+-
+    request:
+        method: GET
+        url: 'https://api.coronavirus.data.gov.uk/v1/data?filters=areaType=utla;areaCode=E12000006;areaName=East%20of%20England&structure={"date":"date","areaName":"areaName","areaCode":"areaCode","newCasesByPublishDate":"newCasesByPublishDate","cumCasesByPublishDate":"cumCasesByPublishDate","newDeaths28DaysByDeathDate":"newDeaths28DaysByDeathDate","cumDeaths28DaysByDeathDate":"cumDeaths28DaysByDeathDate"}'
+        headers:
+            Host: api.coronavirus.data.gov.uk
+            Content-Type: application/json
+    response:
+        status:
+            http_version: '1.1'
+            code: '204'
+            message: 'No Content'
+        headers:
+            Cache-Control: 'public, max-age=90'
+            Content-Length: '0'
+            Content-Location: 'https://api.coronavirus.data.gov.uk/v1/data?filters=areaType=utla;areaCode=E12000006;areaName=East%20of%20England&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22areaCode%22:%22areaCode%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeaths28DaysByDeathDate%22:%22newDeaths28DaysByDeathDate%22,%22cumDeaths28DaysByDeathDate%22:%22cumDeaths28DaysByDeathDate%22%7D&format=json&page=1'
+            Last-Modified: 'Tue, 22 Sep 2020 14:58:38 GMT'
+            Request-Context: 'appId=cid-v1:10ef5909-f7e8-4267-86f0-f575a2bdc89e'
+            X-Content-Type-Options: nosniff
+            referrer-policy: 'origin-when-cross-origin,strict-origin-when-cross-origin'
+            X-Frame-Options: deny
+            Content-Security-Policy: 'default-src ''none''; style-src ''self'' ''unsafe-inline'''
+            x-phe-media-type: PHE-COVID19.v1
+            x-xss-protection: '1; mode=block'
+            Strict-Transport-Security: 'max-age=31536000; includeSubdomains; preload'
+            PHE-Website-Request: '0'
+            PHE-API-Cache-Duration: '3823'
+            Date: 'Tue, 22 Sep 2020 20:04:59 GMT'
+        curl_info:
+            url: 'https://api.coronavirus.data.gov.uk/v1/data?filters=areaType=utla;areaCode=E12000006;areaName=East%20of%20England&structure={"date":"date","areaName":"areaName","areaCode":"areaCode","newCasesByPublishDate":"newCasesByPublishDate","cumCasesByPublishDate":"cumCasesByPublishDate","newDeaths28DaysByDeathDate":"newDeaths28DaysByDeathDate","cumDeaths28DaysByDeathDate":"cumDeaths28DaysByDeathDate"}'
+            content_type: null
+            http_code: 204
+            header_size: 1130
+            request_size: 457
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 0.728943
+            namelookup_time: 0.108664
+            connect_time: 0.274404
+            pretransfer_time: 0.507077
+            size_upload: !!float 0
+            size_download: !!float 0
+            speed_download: !!float 0
+            speed_upload: !!float 0
+            download_content_length: !!float 0
+            upload_content_length: !!float -1
+            starttransfer_time: 0.728867
+            redirect_time: !!float 0
+            redirect_url: ''
+            primary_ip: 51.104.243.27
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 192.168.32.2
+            local_port: 59546
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: HTTPS
+            appconnect_time_us: 506983
+            connect_time_us: 274404
+            namelookup_time_us: 108664
+            pretransfer_time_us: 507077
+            redirect_time_us: 0
+            starttransfer_time_us: 728867
+            total_time_us: 728943
+-
+    request:
+        method: GET
+        url: 'https://api.coronavirus.data.gov.uk/v1/data?filters=areaType=region;areaCode=E12000006;areaName=East%20of%20England&structure={"date":"date","areaName":"areaName","areaCode":"areaCode","newCasesByPublishDate":"newCasesByPublishDate","cumCasesByPublishDate":"cumCasesByPublishDate","newDeaths28DaysByDeathDate":"newDeaths28DaysByDeathDate","cumDeaths28DaysByDeathDate":"cumDeaths28DaysByDeathDate"}'
+        headers:
+            Host: api.coronavirus.data.gov.uk
+            Content-Type: application/json
+    response:
+        status:
+            http_version: '1.1'
+            code: '200'
+            message: OK
+        headers:
+            Cache-Control: 'no-store, must-revalidate, no-cache'
+            Pragma: no-cache
+            Transfer-Encoding: chunked
+            Content-Type: 'application/vnd.PHE-COVID19.v1+json; charset=utf-8'
+            Content-Encoding: gzip
+            Content-Location: 'https://api.coronavirus.data.gov.uk/v1/data?filters=areaType=region;areaCode=E12000006;areaName=East%20of%20England&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22areaCode%22:%22areaCode%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeaths28DaysByDeathDate%22:%22newDeaths28DaysByDeathDate%22,%22cumDeaths28DaysByDeathDate%22:%22cumDeaths28DaysByDeathDate%22%7D&format=json&page=1'
+            Expires: 'Tue, 22 Sep 2020 20:05:06 GMT'
+            Last-Modified: 'Tue, 22 Sep 2020 14:58:38 GMT'
+            Request-Context: 'appId=cid-v1:10ef5909-f7e8-4267-86f0-f575a2bdc89e'
+            referrer-policy: 'origin-when-cross-origin,strict-origin-when-cross-origin'
+            Content-Security-Policy: 'default-src ''none''; style-src ''self'' ''unsafe-inline'''
+            X-Frame-Options: deny
+            x-phe-media-type: PHE-COVID19.v1
+            x-xss-protection: '1; mode=block'
+            Strict-Transport-Security: 'max-age=31536000; includeSubdomains; preload'
+            X-Content-Type-Options: nosniff
+            PHE-Website-Request: '0'
+            PHE-API-Cache-Duration: '15475'
+            Date: 'Tue, 22 Sep 2020 20:05:05 GMT'
+        body: !!binary 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
+        curl_info:
+            url: 'https://api.coronavirus.data.gov.uk/v1/data?filters=areaType=region;areaCode=E12000006;areaName=East%20of%20England&structure={"date":"date","areaName":"areaName","areaCode":"areaCode","newCasesByPublishDate":"newCasesByPublishDate","cumCasesByPublishDate":"cumCasesByPublishDate","newDeaths28DaysByDeathDate":"newDeaths28DaysByDeathDate","cumDeaths28DaysByDeathDate":"cumDeaths28DaysByDeathDate"}'
+            content_type: 'application/vnd.PHE-COVID19.v1+json; charset=utf-8'
+            http_code: 200
+            header_size: 1299
+            request_size: 459
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 0.597728
+            namelookup_time: 0.03271
+            connect_time: 0.057587
+            pretransfer_time: 0.121177
+            size_upload: !!float 0
+            size_download: !!float 2042
+            speed_download: !!float 3420
+            speed_upload: !!float 0
+            download_content_length: !!float -1
+            upload_content_length: !!float -1
+            starttransfer_time: 0.573561
+            redirect_time: !!float 0
+            redirect_url: ''
+            primary_ip: 51.104.243.27
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 192.168.32.2
+            local_port: 59548
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: HTTPS
+            appconnect_time_us: 121063
+            connect_time_us: 57587
+            namelookup_time_us: 32710
+            pretransfer_time_us: 121177
+            redirect_time_us: 0
+            starttransfer_time_us: 573561
+            total_time_us: 597728
+-
+    request:
+        method: GET
+        url: 'https://api.coronavirus.data.gov.uk/v1/data?filters=areaType=region;date=2020-09-20&structure={"date":"date","areaName":"areaName","areaCode":"areaCode","newCasesByPublishDate":"newCasesByPublishDate","cumCasesByPublishDate":"cumCasesByPublishDate","newDeaths28DaysByDeathDate":"newDeaths28DaysByDeathDate","cumDeaths28DaysByDeathDate":"cumDeaths28DaysByDeathDate"}'
+        headers:
+            Host: api.coronavirus.data.gov.uk
+            Content-Type: application/json
+    response:
+        status:
+            http_version: '1.1'
+            code: '200'
+            message: OK
+        headers:
+            Cache-Control: 'no-store, must-revalidate, no-cache'
+            Pragma: no-cache
+            Transfer-Encoding: chunked
+            Content-Type: 'application/vnd.PHE-COVID19.v1+json; charset=utf-8'
+            Content-Encoding: gzip
+            Content-Location: 'https://api.coronavirus.data.gov.uk/v1/data?filters=areaType=region;date=2020-09-20&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22areaCode%22:%22areaCode%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeaths28DaysByDeathDate%22:%22newDeaths28DaysByDeathDate%22,%22cumDeaths28DaysByDeathDate%22:%22cumDeaths28DaysByDeathDate%22%7D&format=json&page=1'
+            Expires: 'Tue, 22 Sep 2020 20:12:08 GMT'
+            Last-Modified: 'Tue, 22 Sep 2020 14:58:38 GMT'
+            Request-Context: 'appId=cid-v1:10ef5909-f7e8-4267-86f0-f575a2bdc89e'
+            x-xss-protection: '1; mode=block'
+            Strict-Transport-Security: 'max-age=31536000; includeSubdomains; preload'
+            X-Content-Type-Options: nosniff
+            referrer-policy: 'origin-when-cross-origin,strict-origin-when-cross-origin'
+            Content-Security-Policy: 'default-src ''none''; style-src ''self'' ''unsafe-inline'''
+            X-Frame-Options: deny
+            x-phe-media-type: PHE-COVID19.v1
+            PHE-Website-Request: '0'
+            PHE-API-Cache-Duration: '14415'
+            Date: 'Tue, 22 Sep 2020 20:12:08 GMT'
+        body: !!binary H4sIAJhaal8C/+1VUWurMBT+KxJonxwzqdrqkMHWwX3YxuAWLpfLHrJ5qtnVpCRxWyn97zfptbQPan2R7mGCmPidk/N934lxgwrgmc5RHLmopJ9PNIN7VjKNYux5notSqimK/2zsAFCMiEe8Cy+6IB5yEZVAH2lp399RpZ0HlhaUp6qGbkW6gzDx7OWb1xw+bqkCdbN+ql4KpvL5bllT6LUqmxBeFcUubQ5U54rM5nRtYnaz49xWmERBuHX78RdL545nVkKzgnAYBaRbgY/9SQ8F94KngjcTnw5DHHcTD3GEexB/FFLnjm1AM3l8FtcJ9vuT/wVt5Mkw5CcnnCeB34P8T1F1Oj87yxcbmMq9ybc7H52FPJ5FfT5WS/vEcRkMwz88cdgEUZ+d81vIvypnEhwjwFnk4PyoyheQzVImw0jxu6VMQn+2fXbRimaMU83M4RhvTIaUwM3/DV2+40v7e7teskKDVIllvlivIJGQmegr60FycGCstKxedSUhGU1vRoRY3Dziw9A1996lGjma7lHrzhFaTy3aaFId2obZvEYL67w2rK7XYt+haHtAXbl7hc6A0XQ+XgpZUp28KcHHplWQ/D/vP/V+C6wkvDNRqf18yaT67t/X7l9Bv1v0pVu03f4DKAoiP/sLAAA=
+        curl_info:
+            url: 'https://api.coronavirus.data.gov.uk/v1/data?filters=areaType=region;date=2020-09-20&structure={"date":"date","areaName":"areaName","areaCode":"areaCode","newCasesByPublishDate":"newCasesByPublishDate","cumCasesByPublishDate":"cumCasesByPublishDate","newDeaths28DaysByDeathDate":"newDeaths28DaysByDeathDate","cumDeaths28DaysByDeathDate":"cumDeaths28DaysByDeathDate"}'
+            content_type: 'application/vnd.PHE-COVID19.v1+json; charset=utf-8'
+            http_code: 200
+            header_size: 1267
+            request_size: 427
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 0.372539
+            namelookup_time: 0.039882
+            connect_time: 0.064394
+            pretransfer_time: 0.130526
+            size_upload: !!float 0
+            size_download: !!float 491
+            speed_download: !!float 1319
+            speed_upload: !!float 0
+            download_content_length: !!float -1
+            upload_content_length: !!float -1
+            starttransfer_time: 0.372423
+            redirect_time: !!float 0
+            redirect_url: ''
+            primary_ip: 51.104.243.27
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 192.168.32.2
+            local_port: 59634
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: HTTPS
+            appconnect_time_us: 130390
+            connect_time_us: 64394
+            namelookup_time_us: 39882
+            pretransfer_time_us: 130526
+            redirect_time_us: 0
+            starttransfer_time_us: 372423
+            total_time_us: 372539
+-
+    request:
+        method: GET
+        url: 'https://api.coronavirus.data.gov.uk/v1/data?filters=areaType=nhsRegion;date=2020-09-20&structure={"date":"date","areaName":"areaName","areaCode":"areaCode","newCasesByPublishDate":"newCasesByPublishDate","cumCasesByPublishDate":"cumCasesByPublishDate","newDeaths28DaysByDeathDate":"newDeaths28DaysByDeathDate","cumDeaths28DaysByDeathDate":"cumDeaths28DaysByDeathDate"}'
+        headers:
+            Host: api.coronavirus.data.gov.uk
+            Content-Type: application/json
+    response:
+        status:
+            http_version: '1.1'
+            code: '200'
+            message: OK
+        headers:
+            Cache-Control: 'no-store, must-revalidate, no-cache'
+            Pragma: no-cache
+            Transfer-Encoding: chunked
+            Content-Type: 'application/vnd.PHE-COVID19.v1+json; charset=utf-8'
+            Content-Encoding: gzip
+            Content-Location: 'https://api.coronavirus.data.gov.uk/v1/data?filters=areaType=nhsRegion;date=2020-09-20&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22areaCode%22:%22areaCode%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeaths28DaysByDeathDate%22:%22newDeaths28DaysByDeathDate%22,%22cumDeaths28DaysByDeathDate%22:%22cumDeaths28DaysByDeathDate%22%7D&format=json&page=1'
+            Expires: 'Tue, 22 Sep 2020 20:12:41 GMT'
+            Last-Modified: 'Tue, 22 Sep 2020 14:58:38 GMT'
+            Request-Context: 'appId=cid-v1:10ef5909-f7e8-4267-86f0-f575a2bdc89e'
+            Content-Security-Policy: 'default-src ''none''; style-src ''self'' ''unsafe-inline'''
+            X-Frame-Options: deny
+            x-phe-media-type: PHE-COVID19.v1
+            x-xss-protection: '1; mode=block'
+            Strict-Transport-Security: 'max-age=31536000; includeSubdomains; preload'
+            X-Content-Type-Options: nosniff
+            referrer-policy: 'origin-when-cross-origin,strict-origin-when-cross-origin'
+            PHE-Website-Request: '0'
+            PHE-API-Cache-Duration: '18880'
+            Date: 'Tue, 22 Sep 2020 20:12:41 GMT'
+        body: !!binary H4sIALlaal8C/+1UXWvCMBT9KyWgT5Wl3Ue1owy0vjmRbTDG2ENm0zZbm0iSOkX870tKij6k7nEVLJTm9tybe+45ITtQYJrJHISBC0q0WaAMz0hJJAg9CKELEiQRCN93eoFBCHzowwEcDXwIXIA4RnNU6v9TJKTDUmdKswLRxIATltTgDayfQP2m+GeCBBbj7aL6LIjI43pj1WpZlTaEVkVRl8UYyVz4wxhtVU4dHWeo8pMZe/fPIWaMJozauV93nPsjSbTwws5+2HH2c8Zl7tSHSA3hvDH+LXLCsX2a0VlM84qFtPL3YMf5P7PKuGHX//Ys+LfqD+/+lf+HC1YoIxRJoi6bcKcqOMdUXbngau1d6Rv3ISWFxFxEmvzLdoUjmosnnKmCez17dJi8LySvlrLiOOoF457va1x9wsPSVW+jjkGOwgbVGh2hJtSoVSqT2obpOquQpq4NM/1aFDw0bU8wnU/vcDKhF8T9lPESyehLMNpXbuHIq8/MRjY2rzheE1aJJk4JFxcLO29hgS4udd2l/f4X4LP94pcKAAA=
+        curl_info:
+            url: 'https://api.coronavirus.data.gov.uk/v1/data?filters=areaType=nhsRegion;date=2020-09-20&structure={"date":"date","areaName":"areaName","areaCode":"areaCode","newCasesByPublishDate":"newCasesByPublishDate","cumCasesByPublishDate":"cumCasesByPublishDate","newDeaths28DaysByDeathDate":"newDeaths28DaysByDeathDate","cumDeaths28DaysByDeathDate":"cumDeaths28DaysByDeathDate"}'
+            content_type: 'application/vnd.PHE-COVID19.v1+json; charset=utf-8'
+            http_code: 200
+            header_size: 1270
+            request_size: 430
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 0.471009
+            namelookup_time: 0.032617
+            connect_time: 0.199153
+            pretransfer_time: 0.271879
+            size_upload: !!float 0
+            size_download: !!float 413
+            speed_download: !!float 876
+            speed_upload: !!float 0
+            download_content_length: !!float -1
+            upload_content_length: !!float -1
+            starttransfer_time: 0.470899
+            redirect_time: !!float 0
+            redirect_url: ''
+            primary_ip: 51.104.243.27
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 192.168.32.2
+            local_port: 59638
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: HTTPS
+            appconnect_time_us: 271664
+            connect_time_us: 199153
+            namelookup_time_us: 32617
+            pretransfer_time_us: 271879
+            redirect_time_us: 0
+            starttransfer_time_us: 470899
+            total_time_us: 471009
+-
+    request:
+        method: GET
+        url: 'https://api.coronavirus.data.gov.uk/v1/data?filters=areaType=utla;date=2020-09-20&structure={"date":"date","areaName":"areaName","areaCode":"areaCode","newCasesByPublishDate":"newCasesByPublishDate","cumCasesByPublishDate":"cumCasesByPublishDate","newDeaths28DaysByDeathDate":"newDeaths28DaysByDeathDate","cumDeaths28DaysByDeathDate":"cumDeaths28DaysByDeathDate"}'
+        headers:
+            Host: api.coronavirus.data.gov.uk
+            Content-Type: application/json
+    response:
+        status:
+            http_version: '1.1'
+            code: '200'
+            message: OK
+        headers:
+            Cache-Control: 'no-store, must-revalidate, no-cache'
+            Pragma: no-cache
+            Transfer-Encoding: chunked
+            Content-Type: 'application/vnd.PHE-COVID19.v1+json; charset=utf-8'
+            Content-Encoding: gzip
+            Content-Location: 'https://api.coronavirus.data.gov.uk/v1/data?filters=areaType=utla;date=2020-09-20&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22areaCode%22:%22areaCode%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeaths28DaysByDeathDate%22:%22newDeaths28DaysByDeathDate%22,%22cumDeaths28DaysByDeathDate%22:%22cumDeaths28DaysByDeathDate%22%7D&format=json&page=1'
+            Expires: 'Tue, 22 Sep 2020 20:13:00 GMT'
+            Last-Modified: 'Tue, 22 Sep 2020 14:58:38 GMT'
+            Request-Context: 'appId=cid-v1:10ef5909-f7e8-4267-86f0-f575a2bdc89e'
+            x-phe-media-type: PHE-COVID19.v1
+            x-xss-protection: '1; mode=block'
+            Strict-Transport-Security: 'max-age=31536000; includeSubdomains; preload'
+            X-Content-Type-Options: nosniff
+            referrer-policy: 'origin-when-cross-origin,strict-origin-when-cross-origin'
+            X-Frame-Options: deny
+            Content-Security-Policy: 'default-src ''none''; style-src ''self'' ''unsafe-inline'''
+            PHE-Website-Request: '0'
+            PHE-API-Cache-Duration: '4026'
+            Date: 'Tue, 22 Sep 2020 20:12:59 GMT'
+        body: !!binary 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
+        curl_info:
+            url: 'https://api.coronavirus.data.gov.uk/v1/data?filters=areaType=utla;date=2020-09-20&structure={"date":"date","areaName":"areaName","areaCode":"areaCode","newCasesByPublishDate":"newCasesByPublishDate","cumCasesByPublishDate":"cumCasesByPublishDate","newDeaths28DaysByDeathDate":"newDeaths28DaysByDeathDate","cumDeaths28DaysByDeathDate":"cumDeaths28DaysByDeathDate"}'
+            content_type: 'application/vnd.PHE-COVID19.v1+json; charset=utf-8'
+            http_code: 200
+            header_size: 1264
+            request_size: 425
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 0.425381
+            namelookup_time: 0.043122
+            connect_time: 0.088428
+            pretransfer_time: 0.155986
+            size_upload: !!float 0
+            size_download: !!float 2734
+            speed_download: !!float 6432
+            speed_upload: !!float 0
+            download_content_length: !!float -1
+            upload_content_length: !!float -1
+            starttransfer_time: 0.397896
+            redirect_time: !!float 0
+            redirect_url: ''
+            primary_ip: 51.104.243.27
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 192.168.32.2
+            local_port: 59642
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: HTTPS
+            appconnect_time_us: 155861
+            connect_time_us: 88428
+            namelookup_time_us: 43122
+            pretransfer_time_us: 155986
+            redirect_time_us: 0
+            starttransfer_time_us: 397896
+            total_time_us: 425381
+-
+    request:
+        method: GET
+        url: 'https://api.coronavirus.data.gov.uk/v1/data?filters=areaType=ltla;date=2020-09-20&structure={"date":"date","areaName":"areaName","areaCode":"areaCode","newCasesByPublishDate":"newCasesByPublishDate","cumCasesByPublishDate":"cumCasesByPublishDate","newDeaths28DaysByDeathDate":"newDeaths28DaysByDeathDate","cumDeaths28DaysByDeathDate":"cumDeaths28DaysByDeathDate"}'
+        headers:
+            Host: api.coronavirus.data.gov.uk
+            Content-Type: application/json
+    response:
+        status:
+            http_version: '1.1'
+            code: '200'
+            message: OK
+        headers:
+            Cache-Control: 'no-store, must-revalidate, no-cache'
+            Pragma: no-cache
+            Transfer-Encoding: chunked
+            Content-Type: 'application/vnd.PHE-COVID19.v1+json; charset=utf-8'
+            Content-Encoding: gzip
+            Content-Location: 'https://api.coronavirus.data.gov.uk/v1/data?filters=areaType=ltla;date=2020-09-20&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22areaCode%22:%22areaCode%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeaths28DaysByDeathDate%22:%22newDeaths28DaysByDeathDate%22,%22cumDeaths28DaysByDeathDate%22:%22cumDeaths28DaysByDeathDate%22%7D&format=json&page=1'
+            Expires: 'Tue, 22 Sep 2020 20:17:04 GMT'
+            Last-Modified: 'Tue, 22 Sep 2020 14:58:38 GMT'
+            Request-Context: 'appId=cid-v1:10ef5909-f7e8-4267-86f0-f575a2bdc89e'
+            X-Content-Type-Options: nosniff
+            referrer-policy: 'origin-when-cross-origin,strict-origin-when-cross-origin'
+            X-Frame-Options: deny
+            Content-Security-Policy: 'default-src ''none''; style-src ''self'' ''unsafe-inline'''
+            x-phe-media-type: PHE-COVID19.v1
+            x-xss-protection: '1; mode=block'
+            Strict-Transport-Security: 'max-age=31536000; includeSubdomains; preload'
+            PHE-Website-Request: '0'
+            PHE-API-Cache-Duration: '7207'
+            Date: 'Tue, 22 Sep 2020 20:17:04 GMT'
+        body: !!binary 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
+        curl_info:
+            url: 'https://api.coronavirus.data.gov.uk/v1/data?filters=areaType=ltla;date=2020-09-20&structure={"date":"date","areaName":"areaName","areaCode":"areaCode","newCasesByPublishDate":"newCasesByPublishDate","cumCasesByPublishDate":"cumCasesByPublishDate","newDeaths28DaysByDeathDate":"newDeaths28DaysByDeathDate","cumDeaths28DaysByDeathDate":"cumDeaths28DaysByDeathDate"}'
+            content_type: 'application/vnd.PHE-COVID19.v1+json; charset=utf-8'
+            http_code: 200
+            header_size: 1264
+            request_size: 425
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 0.579884
+            namelookup_time: 0.05074
+            connect_time: 0.083675
+            pretransfer_time: 0.264044
+            size_upload: !!float 0
+            size_download: !!float 4439
+            speed_download: !!float 7666
+            speed_upload: !!float 0
+            download_content_length: !!float -1
+            upload_content_length: !!float -1
+            starttransfer_time: 0.495185
+            redirect_time: !!float 0
+            redirect_url: ''
+            primary_ip: 51.104.243.27
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 192.168.32.2
+            local_port: 59664
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: HTTPS
+            appconnect_time_us: 263824
+            connect_time_us: 83675
+            namelookup_time_us: 50740
+            pretransfer_time_us: 264044
+            redirect_time_us: 0
+            starttransfer_time_us: 495185
+            total_time_us: 579884
+-
+    request:
+        method: GET
+        url: 'https://api.coronavirus.data.gov.uk/v1/data?filters=areaType=ltla;date=2020-09-21&structure={"date":"date","areaName":"areaName","areaCode":"areaCode","newCasesByPublishDate":"newCasesByPublishDate","cumCasesByPublishDate":"cumCasesByPublishDate","newDeaths28DaysByDeathDate":"newDeaths28DaysByDeathDate","cumDeaths28DaysByDeathDate":"cumDeaths28DaysByDeathDate"}'
+        headers:
+            Host: api.coronavirus.data.gov.uk
+            Content-Type: application/json
+    response:
+        status:
+            http_version: '1.1'
+            code: '200'
+            message: OK
+        headers:
+            Cache-Control: 'no-store, must-revalidate, no-cache'
+            Pragma: no-cache
+            Transfer-Encoding: chunked
+            Content-Type: 'application/vnd.PHE-COVID19.v1+json; charset=utf-8'
+            Content-Encoding: gzip
+            Content-Location: 'https://api.coronavirus.data.gov.uk/v1/data?filters=areaType=ltla;date=2020-09-21&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22areaCode%22:%22areaCode%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeaths28DaysByDeathDate%22:%22newDeaths28DaysByDeathDate%22,%22cumDeaths28DaysByDeathDate%22:%22cumDeaths28DaysByDeathDate%22%7D&format=json&page=1'
+            Expires: 'Tue, 22 Sep 2020 20:20:52 GMT'
+            Last-Modified: 'Tue, 22 Sep 2020 14:58:38 GMT'
+            Request-Context: 'appId=cid-v1:10ef5909-f7e8-4267-86f0-f575a2bdc89e'
+            X-Content-Type-Options: nosniff
+            referrer-policy: 'origin-when-cross-origin,strict-origin-when-cross-origin'
+            Content-Security-Policy: 'default-src ''none''; style-src ''self'' ''unsafe-inline'''
+            X-Frame-Options: deny
+            x-phe-media-type: PHE-COVID19.v1
+            x-xss-protection: '1; mode=block'
+            Strict-Transport-Security: 'max-age=31536000; includeSubdomains; preload'
+            PHE-Website-Request: '0'
+            PHE-API-Cache-Duration: '20914'
+            Date: 'Tue, 22 Sep 2020 20:20:51 GMT'
+        body: !!binary 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
+        curl_info:
+            url: 'https://api.coronavirus.data.gov.uk/v1/data?filters=areaType=ltla;date=2020-09-21&structure={"date":"date","areaName":"areaName","areaCode":"areaCode","newCasesByPublishDate":"newCasesByPublishDate","cumCasesByPublishDate":"cumCasesByPublishDate","newDeaths28DaysByDeathDate":"newDeaths28DaysByDeathDate","cumDeaths28DaysByDeathDate":"cumDeaths28DaysByDeathDate"}'
+            content_type: 'application/vnd.PHE-COVID19.v1+json; charset=utf-8'
+            http_code: 200
+            header_size: 1265
+            request_size: 425
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 0.98796
+            namelookup_time: 0.216638
+            connect_time: 0.359375
+            pretransfer_time: 0.58199
+            size_upload: !!float 0
+            size_download: !!float 5510
+            speed_download: !!float 5582
+            speed_upload: !!float 0
+            download_content_length: !!float -1
+            upload_content_length: !!float -1
+            starttransfer_time: 0.962931
+            redirect_time: !!float 0
+            redirect_url: ''
+            primary_ip: 51.104.243.27
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 192.168.32.2
+            local_port: 59670
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: HTTPS
+            appconnect_time_us: 581767
+            connect_time_us: 359375
+            namelookup_time_us: 216638
+            pretransfer_time_us: 581990
+            redirect_time_us: 0
+            starttransfer_time_us: 962931
+            total_time_us: 987960
