@@ -21,7 +21,7 @@
 ![codecov.io](https://codecov.io/github/gordonbanderson/uk-govt-covid-api-client/branch.svg?branch=master)
 
 # Background
-The UK Government has provided an API for accessing COVID data.  The document is poor, see 
+The UK Government has provided an API for accessing COVID data.  The documentation is poor, see 
 https://coronavirus.data.gov.uk/developers-guide , and if the structure parameter is missing the API call redirects to
 the documentation above (!).  
 
