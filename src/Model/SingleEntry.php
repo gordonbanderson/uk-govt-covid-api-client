@@ -75,7 +75,8 @@ class SingleEntry
     }
 
 
-    public function getCumCasesByPublishDate(): int
+    /** @return int|null */
+    public function getCumCasesByPublishDate()
     {
         return $this->cumCasesByPublishDate;
     }
@@ -87,7 +88,8 @@ class SingleEntry
     }
 
 
-    public function getNewDeaths28DaysByDeathDate(): int
+    /** @return int|null */
+    public function getNewDeaths28DaysByDeathDate()
     {
         return $this->newDeaths28DaysByDeathDate;
     }
@@ -99,7 +101,8 @@ class SingleEntry
     }
 
 
-    public function getCumDeaths28DaysByDeathDate(): int
+    /** @return int|null */
+    public function getCumDeaths28DaysByDeathDate()
     {
         return $this->cumDeaths28DaysByDeathDate;
     }

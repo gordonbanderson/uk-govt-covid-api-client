@@ -32,11 +32,11 @@ class Results
     {
 
         $decoded = \json_decode($json, true);
-        \print_r($decoded);
 
         // deal with the entries retrieved first
         foreach ($decoded['data'] as $entryOrig) {
             $normalizedEntry = new SingleEntry();
+            $normalizedEntry->setDate($entryOrig['date']);
             $normalizedEntry->setAreaName($entryOrig['areaName']);
             $normalizedEntry->setAreaCode($entryOrig['areaCode']);
             $normalizedEntry->setNewCasesByPublishDate($entryOrig['newCasesByPublishDate']);
