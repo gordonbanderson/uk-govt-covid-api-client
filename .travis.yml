@@ -34,11 +34,6 @@ matrix:
       php: 7.4
       env: 'INSTALLER_VERSION=4.5 LINT_CHECK=1'
 
-
-before_install:
-  - mysql -e 'CREATE DATABASE IF NOT EXISTS travis_ci_test;'
-  - psql -c 'create database travis_ci_test;' -U postgres
-
 before_script:
   # Init PHP
   - phpenv rehash
