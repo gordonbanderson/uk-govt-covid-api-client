@@ -27,10 +27,7 @@ class Http
 
         $httpCode = \intval($info['http_code']);
 
-        \error_log('CODE: ' . $httpCode);
         if ($httpCode !== 200) {
-            \error_log('**** EXCEPTION THROWN ****');
-
             throw new \Exception('http error returned');
         }
 

@@ -13,10 +13,10 @@ class Results
     /** @var int */
     private $numberOfResults;
 
-    /** @var string */
+    /** @var string|null */
     private $prevLink;
 
-    /** @var string */
+    /** @var string|null */
     private $nextLink;
 
     /** @var string */
@@ -76,13 +76,13 @@ class Results
     }
 
 
-    public function getPrevLink(): string
+    public function getPrevLink(): ?string
     {
         return $this->prevLink;
     }
 
 
-    public function getNextLink(): string
+    public function getNextLink(): ?string
     {
         return $this->nextLink;
     }

@@ -2,7 +2,6 @@
 
 namespace Suilven\CovidAPIClient\Factory;
 
-use splitbrain\phpcli\Exception;
 use Suilven\CovidAPIClient\Filter\AreaType;
 
 class AreaTypeFactory
@@ -19,7 +18,7 @@ class AreaTypeFactory
     public function getAreaType(string $name): AreaType
     {
         if (!\in_array($name, self::VALID_AREA_TYPES, true)) {
-            throw new Exception('Area type ' . $name . ' is not valid');
+            throw new \Exception('Area type ' . $name . ' is not valid');
         }
 
         /*
