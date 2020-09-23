@@ -53,11 +53,10 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
-        "checkCode": "composer checkcs && composer lint && composer phpstan && composer psalm",
+        "checkCode": "composer checkcs && composer lint && composer phpstan",
         "checkcs": "vendor/bin/phpcs --standard=ruleset.xml --extensions=php --tab-width=4 -sp src tests",
         "fixcs": "vendor/bin/phpcbf --standard=ruleset.xml --extensions=php --tab-width=4 -sp src tests",
         "lint": "vendor/bin/parallel-lint src/ tests/",
-        "phpstan": "vendor/bin/phpstan analyse --level=6 -c tests/phpstan.neon src/",
-        "psalm": "vendor/bin/psalm --show-info=true"
+        "phpstan": "vendor/bin/phpstan analyse --level=6 -c tests/phpstan.neon src/"
     }
 }
