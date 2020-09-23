@@ -46,13 +46,6 @@ before_script:
   - 'composer global require hirak/prestissimo'
   - composer install --prefer-source --no-interaction --no-progress --no-suggest --optimize-autoloader --verbose --profile
 
-
-  # Run dev/build
-  - vendor/bin/sake dev/build flush=all
-
-  # Dump constants for debug
-  - php vendor/silverstripe/framework/tests/dump_constants.php
-
 script:
   - 'if [[ $PHPUNIT_TEST ]]; then vendor/bin/phpunit tests '''' flush=all; fi'
   - 'if [[ $PHPUNIT_COVERAGE_TEST ]]; then phpdbg -qrr vendor/bin/phpunit tests --coverage-clover=coverage.xml '''' flush=all; fi'
