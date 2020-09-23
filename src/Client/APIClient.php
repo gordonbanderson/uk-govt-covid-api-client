@@ -16,21 +16,20 @@ class APIClient
     }
 
 
-    public function getData($filters)
+    /**
+     * @param array<\Suilven\CovidAPIClient\Filter\Filter> $filters
+     * @throws \Exception
+     */
+    public function getData(array $filters): Results
     {
         $encodedFilters = $this->getFiltersForURL($filters);
         $structure = $this->getStructure();
         $url = Http::ENDPOINT . '?filters=' . $encodedFilters;
         $url .= '&structure=' . $structure;
 
-        \error_log('URL: ' . $url);
-
         $gzipped = $this->http->request($url);
-        error_log('GZIPPPED');
-        error_log(print_r($gzipped, true));
 
         $gunzipped = \gzdecode($gzipped);
-
 
         return new Results($gunzipped);
     }
@@ -42,10 +41,7 @@ class APIClient
         $encodedFilters = [];
         /** @var \Suilven\CovidAPIClient\Filter\Filter $filter */
         foreach ($filters as $filter) {
-            //filters=[metricName1]=[string];[metricName2]=[string];[metricName3]=[string]
-            if (!\is_null($filter->getAreaType())) {
-                $encodedFilters[] = 'areaType=' . $filter->getAreaType()->getName();
-            }
+            $encodedFilters[] = 'areaType=' . $filter->getAreaType()->getName();
 
             if (!\is_null($filter->getAreaCode())) {
                 $encodedFilters[] = 'areaCode=' . $filter->getAreaCode();
@@ -66,7 +62,7 @@ class APIClient
     }
 
 
-    private function getStructure()
+    private function getStructure(): string
     {
         $structure = [
             'date' => 'date',
@@ -78,6 +74,7 @@ class APIClient
             'cumDeaths28DaysByDeathDate' => 'cumDeaths28DaysByDeathDate',
         ];
 
-        return \json_encode($structure);
+        // this value will always be set
+        return (string) \json_encode($structure);
     }
 }

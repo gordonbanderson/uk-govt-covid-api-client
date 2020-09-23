@@ -7,13 +7,10 @@ use Suilven\CovidAPIClient\Client\APIClient;
 use Suilven\CovidAPIClient\Factory\AreaTypeFactory;
 use Suilven\CovidAPIClient\Filter\AreaType;
 use Suilven\CovidAPIClient\Filter\Filter;
-use Suilven\CovidAPIClient\Model\SingleEntry;
 
 class APIClientTest extends TestCase
 {
-    /**
-     * @vcr test_area_type_nation
-     */
+    /** @vcr test_area_type_nation */
     public function testAreaTypeNation(): void
     {
         $factory = new AreaTypeFactory();
@@ -30,10 +27,8 @@ class APIClientTest extends TestCase
     }
 
 
-    /**
-     * @vcr textExplore
-     */
-    public function testExplore()
+    /** @vcr textExplore */
+    public function testExplore(): void
     {
         $factory = new AreaTypeFactory();
         $areaType = $factory->getAreaType(AreaType::LOWER_TIER);
@@ -43,13 +38,12 @@ class APIClientTest extends TestCase
         $filter->setAreaType($areaType);
         $filter->setDate('2020-09-21');
         $result = $client->getData([$filter]);
-        print_r($result);
+        \print_r($result);
     }
 
-        /**
-     * @vcr testRegionByName
-     */
-    public function testRegionByName()
+
+        /** @vcr testRegionByName */
+    public function testRegionByName(): void
     {
         $factory = new AreaTypeFactory();
         $areaType = $factory->getAreaType(AreaType::REGION);
@@ -65,10 +59,10 @@ class APIClientTest extends TestCase
 
         $this->assertEquals(264, $result->getNumberOfResults());
 
-        /** @var SingleEntry $firstRecord */
+        /** @var \Suilven\CovidAPIClient\Model\SingleEntry $firstRecord */
         $firstRecord = $result->getRecords()[0];
 
-        print_r($firstRecord);
+        \print_r($firstRecord);
 
         // this is recorded by PHP VCR so the values should not change
         $this->assertEquals(189, $firstRecord->getNewCasesByPublishDate());
@@ -79,8 +73,7 @@ class APIClientTest extends TestCase
     }
 
 
-    /**
-     * @vcr test_area
+    /** @vcr test_area
 
     public function testUpperTierByAreaCode(): void
     {
@@ -94,6 +87,5 @@ class APIClientTest extends TestCase
         $result = $client->getData([$filter]);
         echo '---- JSON ----';
         \print_r($result);
-    }
-     * **/
+    } **/
 }

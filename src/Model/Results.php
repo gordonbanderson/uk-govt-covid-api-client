@@ -4,33 +4,35 @@ namespace Suilven\CovidAPIClient\Model;
 
 class Results
 {
+    /** @var array<\Suilven\CovidAPIClient\Model\SingleEntry> */
     private $records = [];
 
+    /** @var int */
     private $pageSize;
 
+    /** @var int */
     private $numberOfResults;
 
+    /** @var string */
     private $prevLink;
 
+    /** @var string */
     private $nextLink;
 
+    /** @var string */
     private $firstLink;
 
+    /** @var string */
     private $lastLink;
 
+    /** @var string */
     private $currentLink;
 
     /**
-     * @return mixed
+     * Results constructor.
      */
-    public function getCurrentLink()
+    public function __construct(string $json)
     {
-        return $this->currentLink;
-    }
-
-    public function __construct($json)
-    {
-
         $decoded = \json_decode($json, true);
 
         // deal with the entries retrieved first
@@ -56,57 +58,50 @@ class Results
     }
 
 
+    public function getCurrentLink(): string
+    {
+        return $this->currentLink;
+    }
 
-    /**
-     * @return mixed
-     */
-    public function getPageSize()
+
+    public function getPageSize(): int
     {
         return $this->pageSize;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getNumberOfResults()
+
+    public function getNumberOfResults(): int
     {
         return $this->numberOfResults;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getPrevLink()
+
+    public function getPrevLink(): string
     {
         return $this->prevLink;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getNextLink()
+
+    public function getNextLink(): string
     {
         return $this->nextLink;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getFirstLink()
+
+    public function getFirstLink(): string
     {
         return $this->firstLink;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getLastLink()
+
+    public function getLastLink(): string
     {
         return $this->lastLink;
     }
 
 
-    public function getRecords()
+    /** @return array<\Suilven\CovidAPIClient\Model\SingleEntry> */
+    public function getRecords(): array
     {
         return $this->records;
     }

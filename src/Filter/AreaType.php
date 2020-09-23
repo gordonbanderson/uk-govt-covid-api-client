@@ -16,7 +16,10 @@ class AreaType
     private $name;
 
 
-    public function __construct($name)
+    /**
+     * AreaType constructor.
+     */
+    public function __construct(string $name)
     {
         $this->name = $name;
     }

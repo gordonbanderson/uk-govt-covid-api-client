@@ -4,7 +4,7 @@ namespace Suilven\CovidAPIClient\Model;
 
 class SingleEntry
 {
-    /** @var $date */
+    /** @var string $date */
     private $date;
 
     /** @var string */
@@ -25,15 +25,13 @@ class SingleEntry
     /** @var ?int */
     private $cumDeaths28DaysByDeathDate;
 
-    /** @return mixed */
-    public function getDate()
+    public function getDate(): string
     {
         return $this->date;
     }
 
 
-    /** @param mixed $date */
-    public function setDate($date): void
+    public function setDate(string $date): void
     {
         $this->date = $date;
     }
@@ -75,8 +73,7 @@ class SingleEntry
     }
 
 
-    /** @return int|null */
-    public function getCumCasesByPublishDate()
+    public function getCumCasesByPublishDate(): ?int
     {
         return $this->cumCasesByPublishDate;
     }
@@ -88,8 +85,7 @@ class SingleEntry
     }
 
 
-    /** @return int|null */
-    public function getNewDeaths28DaysByDeathDate()
+    public function getNewDeaths28DaysByDeathDate(): ?int
     {
         return $this->newDeaths28DaysByDeathDate;
     }
@@ -101,8 +97,7 @@ class SingleEntry
     }
 
 
-    /** @return int|null */
-    public function getCumDeaths28DaysByDeathDate()
+    public function getCumDeaths28DaysByDeathDate(): ?int
     {
         return $this->cumDeaths28DaysByDeathDate;
     }
