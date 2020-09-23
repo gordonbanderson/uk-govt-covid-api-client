@@ -13,10 +13,10 @@ class SingleEntry
     /** @var string */
     private $areaCode;
 
-    /** @var int */
+    /** @var ?int */
     private $newCasesByPublishDate;
 
-    /** @var int */
+    /** @var ?int */
     private $cumCasesByPublishDate;
 
     /** @var ?int */
@@ -61,7 +61,7 @@ class SingleEntry
     }
 
 
-    public function getNewCasesByPublishDate(): int
+    public function getNewCasesByPublishDate(): ?int
     {
         return $this->newCasesByPublishDate;
     }

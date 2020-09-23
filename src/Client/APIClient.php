@@ -7,7 +7,7 @@ use Suilven\CovidAPIClient\Transport\Http;
 
 class APIClient
 {
-    /** @var \Suilven\CovidAPIClient\Transport\Http|null */
+    /** @var \Suilven\CovidAPIClient\Transport\Http */
     private $http;
 
     public function __construct()
@@ -27,8 +27,11 @@ class APIClient
         $url = Http::ENDPOINT . '?filters=' . $encodedFilters;
         $url .= '&structure=' . $structure;
 
+        // if no string is returned, due to HTTP errors, an exception will have been trhown
+        /** @var string $gzipped */
         $gzipped = $this->http->request($url);
 
+        /** @var string $gunzipped */
         $gunzipped = \gzdecode($gzipped);
 
         return new Results($gunzipped);

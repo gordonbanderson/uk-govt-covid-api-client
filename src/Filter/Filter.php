@@ -2,6 +2,8 @@
 
 namespace Suilven\CovidAPIClient\Filter;
 
+use Suilven\CovidAPIClient\Factory\AreaTypeFactory;
+
 /**
  * Class Filter
  *
@@ -9,7 +11,7 @@ namespace Suilven\CovidAPIClient\Filter;
  */
 class Filter
 {
-    /** @var \Suilven\CovidAPIClient\Filter\AreaType|null */
+    /** @var \Suilven\CovidAPIClient\Filter\AreaType */
     private $areaType;
 
     /** @var string|null */
@@ -20,6 +22,14 @@ class Filter
 
     /** @var string|null */
     private $date;
+
+    public function __construct()
+    {
+        // initialise area type as this is mandatory
+        $factory = new AreaTypeFactory();
+        $this->areaType = $factory->getAreaType(AreaType::NATION);
+    }
+
 
     public function getAreaType(): AreaType
     {
