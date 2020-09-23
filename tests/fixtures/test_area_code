@@ -1,0 +1,72 @@
+
+-
+    request:
+        method: GET
+        url: 'https://api.coronavirus.data.gov.uk/v1/data?filters=areaType=region;areaCode=E12000006&structure={"date":"date","areaName":"areaName","areaCode":"areaCode","newCasesByPublishDate":"newCasesByPublishDate","cumCasesByPublishDate":"cumCasesByPublishDate","newDeaths28DaysByDeathDate":"newDeaths28DaysByDeathDate","cumDeaths28DaysByDeathDate":"cumDeaths28DaysByDeathDate"}'
+        headers:
+            Host: api.coronavirus.data.gov.uk
+            Content-Type: application/json
+    response:
+        status:
+            http_version: '1.1'
+            code: '200'
+            message: OK
+        headers:
+            Cache-Control: 'public, must-revalidate, max-age=90'
+            Pragma: no-cache
+            Transfer-Encoding: chunked
+            Content-Type: 'application/vnd.PHE-COVID19.v1+json; charset=utf-8'
+            Content-Encoding: gzip
+            Content-Location: 'https://api.coronavirus.data.gov.uk/v1/data?filters=areaType=region;areaCode=E12000006&structure=%7B%22date%22:%22date%22,%22areaName%22:%22areaName%22,%22areaCode%22:%22areaCode%22,%22newCasesByPublishDate%22:%22newCasesByPublishDate%22,%22cumCasesByPublishDate%22:%22cumCasesByPublishDate%22,%22newDeaths28DaysByDeathDate%22:%22newDeaths28DaysByDeathDate%22,%22cumDeaths28DaysByDeathDate%22:%22cumDeaths28DaysByDeathDate%22%7D&format=json&page=1'
+            Expires: 'Wed, 23 Sep 2020 20:51:39 GMT'
+            Last-Modified: 'Wed, 23 Sep 2020 14:27:41 GMT'
+            Request-Context: 'appId=cid-v1:10ef5909-f7e8-4267-86f0-f575a2bdc89e'
+            x-xss-protection: '1; mode=block'
+            Strict-Transport-Security: 'max-age=31536000; includeSubdomains; preload'
+            X-Content-Type-Options: nosniff
+            referrer-policy: 'origin-when-cross-origin,strict-origin-when-cross-origin'
+            Content-Security-Policy: 'default-src ''none''; style-src ''self'' ''unsafe-inline'''
+            X-Frame-Options: deny
+            x-phe-media-type: PHE-COVID19.v1
+            PHE-Website-Request: '0'
+            PHE-API-Cache-Duration: '11390'
+            Date: 'Wed, 23 Sep 2020 20:50:08 GMT'
+        body: !!binary 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
+        curl_info:
+            url: 'https://api.coronavirus.data.gov.uk/v1/data?filters=areaType=region;areaCode=E12000006&structure={"date":"date","areaName":"areaName","areaCode":"areaCode","newCasesByPublishDate":"newCasesByPublishDate","cumCasesByPublishDate":"cumCasesByPublishDate","newDeaths28DaysByDeathDate":"newDeaths28DaysByDeathDate","cumDeaths28DaysByDeathDate":"cumDeaths28DaysByDeathDate"}'
+            content_type: 'application/vnd.PHE-COVID19.v1+json; charset=utf-8'
+            http_code: 200
+            header_size: 1270
+            request_size: 430
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 0.886623
+            namelookup_time: 0.109943
+            connect_time: 0.289802
+            pretransfer_time: 0.413098
+            size_upload: !!float 0
+            size_download: !!float 2035
+            speed_download: !!float 2296
+            speed_upload: !!float 0
+            download_content_length: !!float -1
+            upload_content_length: !!float -1
+            starttransfer_time: 0.886581
+            redirect_time: !!float 0
+            redirect_url: ''
+            primary_ip: 51.104.243.27
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 192.168.32.2
+            local_port: 35734
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: HTTPS
+            appconnect_time_us: 412874
+            connect_time_us: 289802
+            namelookup_time_us: 109943
+            pretransfer_time_us: 413098
+            redirect_time_us: 0
+            starttransfer_time_us: 886581
+            total_time_us: 886623
