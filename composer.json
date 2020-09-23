@@ -21,8 +21,10 @@
     ],
     "require": {
         "php": "~7.1",
+        "league/climate": "^3.5",
         "nesbot/carbon": "^2.40",
-        "phpunit/phpunit": "^9.3"
+        "phpunit/phpunit": "^9.3",
+        "vanilla/garden-cli": "^2.2"
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.5",

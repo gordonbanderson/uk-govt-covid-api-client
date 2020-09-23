@@ -1,0 +1,119 @@
+#!/usr/bin/env php
+<?php
+
+use Suilven\CovidAPIClient\Factory\AreaTypeFactory;
+use Suilven\CovidAPIClient\Filter\AreaType;
+
+if (is_file(__DIR__.'/../vendor/autoload.php') === true) {
+    include_once __DIR__.'/../vendor/autoload.php';
+} else {
+    error_log('ERROR: Autoload file could not be found');
+    exit(1);
+}
+
+class CovidAPICLI
+{
+    function datecmp($a, $b)
+    {
+        if ($a['date'] === $b['date']) {
+            return 0;
+        }
+        return ($a['date'] < $b['date']) ? -1 : 1;
+    }
+
+
+
+    private function primeCLI()
+    {
+        $cli = new Garden\Cli\Cli();
+
+        $cli->description('Dump some information from your database.')
+            ->opt('areaType:a', 'Area type, one of region (r), nation (n), u (upper area types), l (lower area types).',
+                true)
+            ->opt('date:d', 'Date to check.', false)
+            ->opt('name:n', 'Name to filter by.', false);
+        return $cli;
+    }
+
+
+    /**
+     * Your main program
+     *
+     * Arguments and options have been parsed when this is run
+     *
+     * @param Options $options
+     * @return void
+     */
+    public function main($argv)
+    {
+        $cli = $this->primeCLI();
+
+        /** @var \Garden\Cli\Args $args */
+        $args = $cli->parse($argv, true);
+
+        $api = new \Suilven\CovidAPIClient\Client\APIClient();
+        $factory = new AreaTypeFactory();
+        $areaType = $factory->getAreaType(AreaType::NATION);
+
+        $climate = new League\CLImate\CLImate();
+        $climate->info($args->getOpt('areaType'));
+        $areaTypeOption = $args->getOpt('areaType');
+        switch($areaTypeOption) {
+            case 'r':
+                $areaType = $factory->getAreaType(AreaType::REGION);
+                break;
+            case 'n':
+                $areaType = $factory->getAreaType(AreaType::NATION);
+                break;
+            case 'nh':
+                $areaType = $factory->getAreaType(AreaType::NHS_REGION);
+                break;
+            case 'u':
+                $areaType = $factory->getAreaType(AreaType::UPPER_TIER);
+                break;
+            case 'l':
+                $areaType = $factory->getAreaType(AreaType::LOWER_TIER);
+                break;
+        }
+
+        $filter = new Suilven\CovidAPIClient\Filter\Filter();
+        $filter->setAreaType($areaType);
+
+        $nameFilter = $args->getOpt('name');
+        if (isset($nameFilter)) {
+            $filter->setAreaName($nameFilter);
+        }
+
+        $dateFilter = $args->getOpt('date');
+        if (isset($dateFilter)) {
+            $filter->setDate($dateFilter);
+        }
+
+        $result = $api->getData([$filter]);
+
+        $recordsAsArray = [];
+
+        /** @var \Suilven\CovidAPIClient\Model\SingleEntry $record */
+        foreach($result->getRecords() as $record) {
+            $entry = [];
+            $entry['Name'] = $record->getAreaName();
+            $entry['Date'] = $record->getDate();
+            $entry['Cases'] = $record->getNewCasesByPublishDate();
+            $entry['Deaths'] = $record->getNewDeaths28DaysByDeathDate();
+            $entry['Cumulative Cases 28'] = $record->getCumCasesByPublishDate();
+            $entry['Cumulative Deaths 28'] = $record->getCumDeaths28DaysByDeathDate();
+
+            //    $entry['Name'] = $record->getAreaName();
+            $recordsAsArray[] = $entry;
+        }
+
+        usort($recordsAsArray, function($a, $b) {
+            return $a['Date'] > $b['Date'];
+        });
+        $climate->table($recordsAsArray);
+    }
+}
+// execute it
+$cli = new CovidAPICLI();
+$cli->main($argv);
+
