@@ -34,11 +34,6 @@ matrix:
       php: 7.4
       env: 'INSTALLER_VERSION=4.5 LINT_CHECK=1'
 
-
-before_install:
-  - mysql -e 'CREATE DATABASE IF NOT EXISTS travis_ci_test;'
-  - psql -c 'create database travis_ci_test;' -U postgres
-
 before_script:
   # Init PHP
   - phpenv rehash
@@ -51,16 +46,9 @@ before_script:
   - 'composer global require hirak/prestissimo'
   - composer install --prefer-source --no-interaction --no-progress --no-suggest --optimize-autoloader --verbose --profile
 
-
-  # Run dev/build
-  - vendor/bin/sake dev/build flush=all
-
-  # Dump constants for debug
-  - php vendor/silverstripe/framework/tests/dump_constants.php
-
 script:
-  - 'if [[ $PHPUNIT_TEST ]]; then vendor/bin/phpunit tests '''' flush=all; fi'
-  - 'if [[ $PHPUNIT_COVERAGE_TEST ]]; then phpdbg -qrr vendor/bin/phpunit tests --coverage-clover=coverage.xml '''' flush=all; fi'
+  - 'if [[ $PHPUNIT_TEST ]]; then vendor/bin/phpunit tests ; fi'
+  - 'if [[ $PHPUNIT_COVERAGE_TEST ]]; then phpdbg -qrr vendor/bin/phpunit tests --coverage-clover=coverage.xml; fi'
   - 'if [[ $DUPLICATE_CODE_CHECK ]]; then node_modules/jscpd/bin/jscpd src ; fi'
   - 'if [[ $PHPCS_TEST ]]; then vendor/bin/phpcs --standard=ruleset.xml --extensions=php --tab-width=4 -sp src tests ; fi'
   - 'if [[ $LINT_CHECK ]]; then vendor/bin/parallel-lint src/ tests/ ; fi'
